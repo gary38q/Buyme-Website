@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AsessmentController;
 use App\Http\Controllers\AsessmentUserDataController;
+use App\Http\Controllers\loginController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UndianController;
 use App\Http\Controllers\PointMemberController;
@@ -65,3 +66,7 @@ Route::post('/insert-asessment-result', [AsessmentController::class, 'store']);
 
 Route::get('/asessment-result', [AsessmentController::class, 'index_result'])->name('test-result');
 //End Assessment
+
+Route::get('/login', [loginController::class, 'index']);
+
+// Route::middleware()
